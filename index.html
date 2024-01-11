@@ -21,12 +21,13 @@
             <li><a href="#" class="nav-link px-2 link-secondary">Ana Sayfa</a></li>
             <li><a href="#" class="nav-link px-2">Kitap Kulüpleri</a></li>
             <li><a href="#" class="nav-link px-2">Lokasyonlar</a></li>
+            <li><a href="#" class="nav-link px-2">Kitap Kulübü Oluştur</a></li>
 
           </ul>
     
           <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Giriş Yap</button>
-            <button type="button" class="btn btn-primary">Üye Ol</button>
+            <button id="login" type="button" class="btn btn-outline-primary me-2">Giriş Yap</button>
+            <button id="sign-up" type="button" class="btn btn-primary">Üye Ol</button>
           </div>
         </header>
       </div>
@@ -46,11 +47,19 @@
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Kitap Kulüpler</button>
                 <button type="button" class="btn btn-outline-secondary btn-lg px-4">Lokasyonlar</button>
+              
               </div>
             </div>
           </div>
     </section>
-    <section>
+    <!-- Add the Turkey map here -->
+<section>
+  <div class="container">
+      <img src="./assests/img/turkey-map.jpg" alt="Turkey Map" width="60%" height="auto">
+      <p style="float: right; font-size: larger;display: flex; justify-content: center;align-items: center;" >EKLENEN KİTAP KULÜBÜNÜZÜ <BR></BR>HARİTA ÜZERiNDEN GÖREBİLİRSİNİZ</p>
+  </div>
+</section>
+    <section class="footer">
         <div class="container">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
               <div class="col-md-4 d-flex align-items-center">
@@ -69,5 +78,17 @@
           </div>
     </section>
 
+<script>
+  document.getElementById("sign-up").addEventListener("click", function() {
+   window.location.href = "sign-up.html";
+});
+document.getElementById("login").addEventListener("click", function() {
+   window.location.href = "login.html";
+});
+document.querySelector(".nav li:last-child a").addEventListener("click", function() {
+  window.location.href = "create-book-club.html"; // Replace with the actual URL of your create book club page
+});
+
+</script>
 </body>
 </html>
